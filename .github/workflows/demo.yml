@@ -1,0 +1,22 @@
+name: Demo
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  greet:
+    name: Greet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print sentinel
+        run: echo "walkthrough-sentinel-7f3a"
+
+  boom:
+    name: Boom
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deliberately fail
+        run: |
+          echo "about to fail on purpose"
+          exit 1
